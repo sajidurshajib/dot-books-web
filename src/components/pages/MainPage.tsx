@@ -1,7 +1,9 @@
+import { MainHeadTemplate } from '../templates'
+
 const MainPage = () => {
     return (
         <div>
-            <h2>Main page</h2>
+            <MainHeadTemplate />
         </div>
     )
 }
