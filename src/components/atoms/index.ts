@@ -1,3 +1,5 @@
 import MainSearch from './MainSearch'
+import LangButton from './LangButton'
+import BookThumb from './Book/BookThumb'
 
-export { MainSearch }
+export { MainSearch, LangButton, BookThumb }

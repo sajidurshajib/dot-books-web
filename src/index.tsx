@@ -4,12 +4,27 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
+import global_en from './translations/en/global.json'
+import global_bn from './translations/bn/global.json'
+import i18next from 'i18next'
+import { I18nextProvider } from 'react-i18next'
+
+i18next.init({
+    interpolation: { escapeValue: false },
+    lng: 'en',
+    resources: {
+        en: { global: global_en },
+        bn: { global: global_bn },
+    },
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App />
+            <I18nextProvider i18n={i18next}>
+                <App />
+            </I18nextProvider>
         </BrowserRouter>
     </React.StrictMode>,
 )

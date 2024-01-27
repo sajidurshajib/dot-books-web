@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { LangButton } from '../../atoms'
 
 const PrimaryNav = () => {
     const navData = [
@@ -11,11 +12,11 @@ const PrimaryNav = () => {
         { txt: 'pre-order', lnk: '/primary' },
     ]
     return (
-        <div className="2xl:container mx-auto p-3 px-10 mt-8 bg-yellow-200 brightness-105 grid grid-cols-12">
+        <div className="2xl:container mx-auto p-3 px-10 mt-8 bg-secondary-yellow grid grid-cols-12">
             <div className="col-span-8">
                 {navData.map((v, i) => {
                     return (
-                        <Link key={i} to={v.lnk} className="mr-8 text-gray-600 text-sm font-medium">
+                        <Link key={i} to={v.lnk} className="mr-8 text-primary-dark text-sm font-medium">
                             {v.txt}
                         </Link>
                     )
@@ -23,15 +24,18 @@ const PrimaryNav = () => {
             </div>
             <div className="col-span-4">
                 <div className="float-right">
-                    <Link to="check" className="ml-8 text-gray-600 text-sm font-medium">
+                    <Link to="check" className="ml-8 text-primary-dark text-sm font-medium">
                         Offer
                     </Link>
-                    <Link to="check" className="ml-8 text-gray-600 text-sm font-medium">
+                    <Link to="check" className="ml-8 text-primary-dark text-sm font-medium">
                         Gift card
                     </Link>
-                    <Link to="check" className="ml-8 text-gray-600 text-sm font-medium">
+                    <Link to="check" className="ml-8 text-primary-dark text-sm font-medium">
                         Discount
                     </Link>
+                    <span className="ml-4">
+                        <LangButton />
+                    </span>
                 </div>
             </div>
         </div>

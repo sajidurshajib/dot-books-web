@@ -1,0 +1,9 @@
+{
+    "settings":{
+        "lang":"en",
+        "language":"English"
+    },
+    "main":{
+        "name": "DotBooks"
+    }
+}
